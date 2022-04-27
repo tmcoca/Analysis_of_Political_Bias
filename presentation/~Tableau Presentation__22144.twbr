@@ -1,0 +1,1454 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='votes' inline='true' name='federated.083jbtb008ilnx1bdixv711kfsk5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='votes' name='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw'>
+            <connection class='textscan' directory='C:/Users/cocat/Documents/NSS/Projects/Analysis_of_Political_Bias/data' filename='votes.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='transactions.csv' table='[transactions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='date' name='Transaction Date' ordinal='1' />
+            <column datatype='string' name='Owner' ordinal='2' />
+            <column datatype='string' name='Stock' ordinal='3' />
+            <column datatype='string' name='Asset Description' ordinal='4' />
+            <column datatype='string' name='Asset Type' ordinal='5' />
+            <column datatype='string' name='Transaction Type' ordinal='6' />
+            <column datatype='string' name='Amount' ordinal='7' />
+            <column datatype='date' name='Disclosure Date' ordinal='8' />
+            <column datatype='string' name='Senator' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='votes.csv' table='[votes#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='States' ordinal='1' />
+              <column datatype='string' name='Senators' ordinal='2' />
+              <column datatype='string' name='Roll Call' ordinal='3' />
+              <column datatype='string' name='Party' ordinal='4' />
+              <column datatype='string' name='Decision' ordinal='5' />
+              <column datatype='string' name='Introduced' ordinal='6' />
+              <column datatype='string' name='Result' ordinal='7' />
+              <column datatype='string' name='Proportion' ordinal='8' />
+              <column datatype='string' name='Congress' ordinal='9' />
+              <column datatype='string' name='Policy Area' ordinal='10' />
+              <column datatype='string' name='Sector' ordinal='11' />
+              <column datatype='string' name='Relevant Bill' ordinal='12' />
+              <column datatype='string' name='Relevant Stocks Owned' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='votes_ext.csv' table='[votes_ext#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='States' ordinal='1' />
+              <column datatype='string' name='Senators' ordinal='2' />
+              <column datatype='string' name='Roll Call' ordinal='3' />
+              <column datatype='string' name='Party' ordinal='4' />
+              <column datatype='string' name='Decision' ordinal='5' />
+              <column datatype='string' date-parse-format='MMM dd, yyyy &apos;at&apos; HH:mm &apos;p&apos;.&apos;m&apos;. &apos;ET&apos;' name='Introduced' ordinal='6' />
+              <column datatype='string' name='Result' ordinal='7' />
+              <column datatype='string' name='Proportion' ordinal='8' />
+              <column datatype='string' name='Congress' ordinal='9' />
+              <column datatype='string' name='Policy Area' ordinal='10' />
+              <column datatype='string' name='Sector' ordinal='11' />
+              <column datatype='string' name='Relevant Bill' ordinal='12' />
+              <column datatype='string' name='Relevant Stocks Owned' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='transactions.csv' table='[transactions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Transaction Date' ordinal='1' />
+              <column datatype='string' name='Owner' ordinal='2' />
+              <column datatype='string' name='Stock' ordinal='3' />
+              <column datatype='string' name='Asset Description' ordinal='4' />
+              <column datatype='string' name='Asset Type' ordinal='5' />
+              <column datatype='string' name='Transaction Type' ordinal='6' />
+              <column datatype='string' name='Amount' ordinal='7' />
+              <column datatype='date' name='Disclosure Date' ordinal='8' />
+              <column datatype='string' name='Senator' ordinal='9' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Amount]' value='[transactions.csv].[Amount]' />
+          <map key='[Asset Description]' value='[transactions.csv].[Asset Description]' />
+          <map key='[Asset Type]' value='[transactions.csv].[Asset Type]' />
+          <map key='[Congress (votes_ext.csv)]' value='[votes_ext.csv].[Congress]' />
+          <map key='[Congress]' value='[votes.csv].[Congress]' />
+          <map key='[Decision (votes_ext.csv)]' value='[votes_ext.csv].[Decision]' />
+          <map key='[Decision]' value='[votes.csv].[Decision]' />
+          <map key='[Disclosure Date]' value='[transactions.csv].[Disclosure Date]' />
+          <map key='[F1 (transactions.csv)]' value='[transactions.csv].[F1]' />
+          <map key='[F1 (votes_ext.csv)]' value='[votes_ext.csv].[F1]' />
+          <map key='[F1]' value='[votes.csv].[F1]' />
+          <map key='[Introduced (votes_ext.csv)]' value='[votes_ext.csv].[Introduced]' />
+          <map key='[Introduced]' value='[votes.csv].[Introduced]' />
+          <map key='[Owner]' value='[transactions.csv].[Owner]' />
+          <map key='[Party (votes_ext.csv)]' value='[votes_ext.csv].[Party]' />
+          <map key='[Party]' value='[votes.csv].[Party]' />
+          <map key='[Policy Area (votes_ext.csv)]' value='[votes_ext.csv].[Policy Area]' />
+          <map key='[Policy Area]' value='[votes.csv].[Policy Area]' />
+          <map key='[Proportion (votes_ext.csv)]' value='[votes_ext.csv].[Proportion]' />
+          <map key='[Proportion]' value='[votes.csv].[Proportion]' />
+          <map key='[Relevant Bill (votes_ext.csv)]' value='[votes_ext.csv].[Relevant Bill]' />
+          <map key='[Relevant Bill]' value='[votes.csv].[Relevant Bill]' />
+          <map key='[Relevant Stocks Owned (votes_ext.csv)]' value='[votes_ext.csv].[Relevant Stocks Owned]' />
+          <map key='[Relevant Stocks Owned]' value='[votes.csv].[Relevant Stocks Owned]' />
+          <map key='[Result (votes_ext.csv)]' value='[votes_ext.csv].[Result]' />
+          <map key='[Result]' value='[votes.csv].[Result]' />
+          <map key='[Roll Call (votes_ext.csv)]' value='[votes_ext.csv].[Roll Call]' />
+          <map key='[Roll Call]' value='[votes.csv].[Roll Call]' />
+          <map key='[Sector (votes_ext.csv)]' value='[votes_ext.csv].[Sector]' />
+          <map key='[Sector]' value='[votes.csv].[Sector]' />
+          <map key='[Senator]' value='[transactions.csv].[Senator]' />
+          <map key='[Senators (votes_ext.csv)]' value='[votes_ext.csv].[Senators]' />
+          <map key='[Senators]' value='[votes.csv].[Senators]' />
+          <map key='[States (votes_ext.csv)]' value='[votes_ext.csv].[States]' />
+          <map key='[States]' value='[votes.csv].[States]' />
+          <map key='[Stock]' value='[transactions.csv].[Stock]' />
+          <map key='[Transaction Date]' value='[transactions.csv].[Transaction Date]' />
+          <map key='[Transaction Type]' value='[transactions.csv].[Transaction Type]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>States</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[States]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>States</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Senators</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Senators]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Senators</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Roll Call</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Roll Call]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Roll Call</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Party</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Party]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Party</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Decision</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Decision]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Decision</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Introduced</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Introduced]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Introduced</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Result]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Result</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Proportion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Proportion]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Proportion</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Congress</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Congress]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Congress</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Policy Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Policy Area]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Policy Area</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relevant Bill</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Relevant Bill]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Relevant Bill</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relevant Stocks Owned</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Relevant Stocks Owned]</local-name>
+            <parent-name>[votes.csv]</parent-name>
+            <remote-alias>Relevant Stocks Owned</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes.csv_36426A972E2140948ABAE5FCECE37C2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>States</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[States (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>States</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Senators</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Senators (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Senators</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Roll Call</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Roll Call (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Roll Call</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Party</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Party (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Party</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Decision</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Decision (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Decision</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Introduced</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Introduced (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Introduced</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Result (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Result</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Proportion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Proportion (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Proportion</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Congress</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Congress (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Congress</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Policy Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Policy Area (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Policy Area</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sector (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relevant Bill</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Relevant Bill (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Relevant Bill</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relevant Stocks Owned</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Relevant Stocks Owned (votes_ext.csv)]</local-name>
+            <parent-name>[votes_ext.csv]</parent-name>
+            <remote-alias>Relevant Stocks Owned</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (transactions.csv)]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Transaction Date]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Transaction Date</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Owner]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Owner</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Stock]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Stock</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Asset Description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Asset Description]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Asset Description</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Asset Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Asset Type]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Asset Type</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Transaction Type]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Transaction Type</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disclosure Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Disclosure Date]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Disclosure Date</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Senator</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Senator]</local-name>
+            <parent-name>[transactions.csv]</parent-name>
+            <remote-alias>Senator</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions.csv_F6C73816CC124E278DA2687F3054C997]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='O' datatype='string' name='[Calculation_2192971571704287232]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&apos;O&apos;' />
+      </column>
+      <column caption='Column' datatype='integer' name='[Calculation_2192971571704500225]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='0' />
+      </column>
+      <column caption='date_diff' datatype='integer' name='[Calculation_2360449182828355585]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Introduced (votes_ext.csv) - Split 1] - [Transaction Date]' />
+      </column>
+      <column caption='tran_date_attr' datatype='date' name='[Calculation_2360449182832570370]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[Transaction Date]' />
+      </column>
+      <column caption='intro_date_attr' datatype='date' name='[Calculation_2360449182832893955]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[Introduced (votes_ext.csv) - Split 1]' />
+      </column>
+      <column datatype='string' name='[Congress]' role='dimension' type='nominal' />
+      <column caption='Date Introduced (copy)' datatype='string' datatype-customized='true' name='[Date Introduced (copy)_1558245499351781377]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.083jbtb008ilnx1bdixv711kfsk5].[Introduced (votes_ext.csv)]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [Introduced (votes_ext.csv)], &quot; at&quot;, 1 ) )' />
+      </column>
+      <column caption='F1 (votes ext.csv)' datatype='integer' name='[F1 (votes_ext.csv)]' role='measure' type='quantitative' />
+      <column caption='Date Introduced' datatype='date' datatype-customized='true' name='[Introduced (votes_ext.csv) - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.083jbtb008ilnx1bdixv711kfsk5].[Introduced (votes_ext.csv)]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;MMM dd, yyyy&quot;, TRIM( SPLIT( [Introduced (votes_ext.csv)], &quot; at&quot;, 1 ) ) )) ' />
+      </column>
+      <column caption='Introduced (Old) (votes_ext.csv)' datatype='string' name='[Introduced (votes_ext.csv)]' role='dimension' type='nominal' />
+      <column caption='Introduced' datatype='date' datatype-customized='true' name='[Introduced - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.083jbtb008ilnx1bdixv711kfsk5].[Introduced]'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;MMM dd, yyyy&quot;, TRIM( SPLIT( [Introduced], &quot; at&quot;, 1 ) ) )) ' />
+      </column>
+      <column caption='Introduced (old)' datatype='string' hidden='true' name='[Introduced]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Party]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Policy Area]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Relevant Bill]' role='dimension' type='nominal' />
+      <column caption='Stock' datatype='string' name='[Relevant Stocks Owned (votes_ext.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Relevant Stocks Owned]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Senators]' role='dimension' type='nominal' />
+      <column datatype='string' name='[States]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Stock (Transactions)' datatype='string' name='[Stock]' role='dimension' type='nominal' />
+      <column caption='Transaction Date (copy)' datatype='string' datatype-customized='true' name='[Transaction Date (copy)_1558245499351003136]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([Transaction Date])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='transactions.csv' datatype='table' name='[__tableau_internal_object_id__].[transactions.csv_F6C73816CC124E278DA2687F3054C997]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='votes.csv' datatype='table' name='[__tableau_internal_object_id__].[votes.csv_36426A972E2140948ABAE5FCECE37C2F]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='votes_ext.csv' datatype='table' name='[__tableau_internal_object_id__].[votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9]' role='measure' type='quantitative' />
+      <column-instance column='[Senators]' derivation='None' name='[none:Senators:nk]' pivot='key' type='nominal' />
+      <column-instance column='[States]' derivation='None' name='[none:States:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Congress,Party,Policy Area,Relevant Bill,Relevant Stocks Owned,Senators,States)' hidden='true' name='[Action (Congress,Party,Policy Area,Relevant Bill,Relevant Stocks Owned,Senators,States)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Congress]' />
+          <groupfilter function='level-members' level='[Party]' />
+          <groupfilter function='level-members' level='[Policy Area]' />
+          <groupfilter function='level-members' level='[Relevant Bill]' />
+          <groupfilter function='level-members' level='[Relevant Stocks Owned]' />
+          <groupfilter function='level-members' level='[Senators]' />
+          <groupfilter function='level-members' level='[States]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Senators,States)' hidden='true' name='[Action (Senators,States)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Senators]' />
+          <groupfilter function='level-members' level='[States]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Senators,States)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Senators:nk]' />
+          <groupfilter function='level-members' level='[none:States:nk]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1 (transactions.csv)' />
+        <field-sort-custom-order field='Calculation_2192971571704500225' />
+        <field-sort-custom-order field='Calculation_2192971571704287232' />
+        <field-sort-custom-order field='Transaction Date' />
+        <field-sort-custom-order field='Transaction Date (copy)_1558245499351003136' />
+        <field-sort-custom-order field='Owner' />
+        <field-sort-custom-order field='Stock' />
+        <field-sort-custom-order field='Asset Description' />
+        <field-sort-custom-order field='Asset Type' />
+        <field-sort-custom-order field='Transaction Type' />
+        <field-sort-custom-order field='Amount' />
+        <field-sort-custom-order field='Disclosure Date' />
+        <field-sort-custom-order field='Senator' />
+        <field-sort-custom-order field='Calculation_2360449182832570370' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='transactions.csv' id='transactions.csv_F6C73816CC124E278DA2687F3054C997'>
+            <properties context=''>
+              <relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='transactions.csv' table='[transactions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='date' name='Transaction Date' ordinal='1' />
+                  <column datatype='string' name='Owner' ordinal='2' />
+                  <column datatype='string' name='Stock' ordinal='3' />
+                  <column datatype='string' name='Asset Description' ordinal='4' />
+                  <column datatype='string' name='Asset Type' ordinal='5' />
+                  <column datatype='string' name='Transaction Type' ordinal='6' />
+                  <column datatype='string' name='Amount' ordinal='7' />
+                  <column datatype='date' name='Disclosure Date' ordinal='8' />
+                  <column datatype='string' name='Senator' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='votes.csv' id='votes.csv_36426A972E2140948ABAE5FCECE37C2F'>
+            <properties context=''>
+              <relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='votes.csv' table='[votes#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='States' ordinal='1' />
+                  <column datatype='string' name='Senators' ordinal='2' />
+                  <column datatype='string' name='Roll Call' ordinal='3' />
+                  <column datatype='string' name='Party' ordinal='4' />
+                  <column datatype='string' name='Decision' ordinal='5' />
+                  <column datatype='string' name='Introduced' ordinal='6' />
+                  <column datatype='string' name='Result' ordinal='7' />
+                  <column datatype='string' name='Proportion' ordinal='8' />
+                  <column datatype='string' name='Congress' ordinal='9' />
+                  <column datatype='string' name='Policy Area' ordinal='10' />
+                  <column datatype='string' name='Sector' ordinal='11' />
+                  <column datatype='string' name='Relevant Bill' ordinal='12' />
+                  <column datatype='string' name='Relevant Stocks Owned' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='votes_ext.csv' id='votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9'>
+            <properties context=''>
+              <relation connection='textscan.0a2dtqi1dw2hxo16xa2hu09iulbw' name='votes_ext.csv' table='[votes_ext#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='States' ordinal='1' />
+                  <column datatype='string' name='Senators' ordinal='2' />
+                  <column datatype='string' name='Roll Call' ordinal='3' />
+                  <column datatype='string' name='Party' ordinal='4' />
+                  <column datatype='string' name='Decision' ordinal='5' />
+                  <column datatype='string' date-parse-format='MMM dd, yyyy &apos;at&apos; HH:mm &apos;p&apos;.&apos;m&apos;. &apos;ET&apos;' name='Introduced' ordinal='6' />
+                  <column datatype='string' name='Result' ordinal='7' />
+                  <column datatype='string' name='Proportion' ordinal='8' />
+                  <column datatype='string' name='Congress' ordinal='9' />
+                  <column datatype='string' name='Policy Area' ordinal='10' />
+                  <column datatype='string' name='Sector' ordinal='11' />
+                  <column datatype='string' name='Relevant Bill' ordinal='12' />
+                  <column datatype='string' name='Relevant Stocks Owned' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Senators (votes_ext.csv)]' />
+                <expression op='[Senator]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Relevant Stocks Owned (votes_ext.csv)]' />
+                <expression op='[Stock]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9' />
+            <second-end-point object-id='transactions.csv_F6C73816CC124E278DA2687F3054C997' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Senators]' />
+              <expression op='[Senators (votes_ext.csv)]' />
+            </expression>
+            <first-end-point object-id='votes.csv_36426A972E2140948ABAE5FCECE37C2F' />
+            <second-end-point object-id='votes_ext.csv_19D60BA46EEB448887B6A528F2B63CF9' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter1' name='[Action1_1FBE3337B6EE4D0D8C06E977F2989B00]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action2_A060A29EE794479FB6CAD6B04AC9F663]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Biased Votes' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action4_90D9AECF80CB4A7BA2BC65FF3EA0B652]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Biased Transactions' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action4_FDD59A7E61134D64B3EE0C35380D4AD8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='State Map' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Biased Transactions'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='votes' name='federated.083jbtb008ilnx1bdixv711kfsk5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.083jbtb008ilnx1bdixv711kfsk5'>
+            <column datatype='string' name='[Amount]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Asset Description]' role='dimension' type='nominal' />
+            <column caption='date_diff' datatype='integer' name='[Calculation_2360449182828355585]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Introduced (votes_ext.csv) - Split 1] - [Transaction Date]' />
+            </column>
+            <column caption='Date Introduced (copy)' datatype='string' datatype-customized='true' name='[Date Introduced (copy)_1558245499351781377]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.083jbtb008ilnx1bdixv711kfsk5].[Introduced (votes_ext.csv)]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [Introduced (votes_ext.csv)], &quot; at&quot;, 1 ) )' />
+            </column>
+            <column caption='Date Introduced' datatype='date' datatype-customized='true' name='[Introduced (votes_ext.csv) - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.083jbtb008ilnx1bdixv711kfsk5].[Introduced (votes_ext.csv)]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;MMM dd, yyyy&quot;, TRIM( SPLIT( [Introduced (votes_ext.csv)], &quot; at&quot;, 1 ) ) )) ' />
+            </column>
+            <column caption='Introduced (Old) (votes_ext.csv)' datatype='string' name='[Introduced (votes_ext.csv)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Relevant Bill (votes_ext.csv)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Senator]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Senators]' role='dimension' type='nominal' />
+            <column datatype='string' name='[States]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Stock (Transactions)' datatype='string' name='[Stock]' role='dimension' type='nominal' />
+            <column caption='Transaction Date (copy)' datatype='string' datatype-customized='true' name='[Transaction Date (copy)_1558245499351003136]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR([Transaction Date])' />
+            </column>
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Date Introduced (copy)_1558245499351781377]' derivation='Attribute' name='[attr:Date Introduced (copy)_1558245499351781377:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='Attribute' name='[attr:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Amount]' derivation='None' name='[none:Amount:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Asset Description]' derivation='None' name='[none:Asset Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Relevant Bill (votes_ext.csv)]' derivation='None' name='[none:Relevant Bill (votes_ext.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Senator]' derivation='None' name='[none:Senator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stock]' derivation='None' name='[none:Stock:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Date (copy)_1558245499351003136]' derivation='None' name='[none:Transaction Date (copy)_1558245499351003136:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2360449182828355585]' derivation='Sum' name='[sum:Calculation_2360449182828355585:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.083jbtb008ilnx1bdixv711kfsk5].[Action (Senators,States)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_FDD59A7E61134D64B3EE0C35380D4AD8]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Senators]' />
+              <groupfilter function='level-members' level='[States]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.083jbtb008ilnx1bdixv711kfsk5].[none:Relevant Bill (votes_ext.csv):nk]'>
+            <groupfilter from='&quot;H.Con.Res. 112&quot;' function='range' level='[none:Relevant Bill (votes_ext.csv):nk]' to='&quot;S.J.Res. 63&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.083jbtb008ilnx1bdixv711kfsk5].[Action (Senators,States)]</column>
+            <column>[federated.083jbtb008ilnx1bdixv711kfsk5].[none:Relevant Bill (votes_ext.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.083jbtb008ilnx1bdixv711kfsk5].[sum:Calculation_2360449182828355585:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.083jbtb008ilnx1bdixv711kfsk5].[sum:Calculation_2360449182828355585:qk]' />
+              <lod column='[federated.083jbtb008ilnx1bdixv711kfsk5].[attr:Transaction Date:ok]' />
+              <tooltip column='[federated.083jbtb008ilnx1bdixv711kfsk5].[attr:Date Introduced (copy)_1558245499351781377:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Senator:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Stock:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Relevant Bill (votes_ext.csv):nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Asset Description:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Amount:nk] / [federated.083jbtb008ilnx1bdixv711kfsk5].[none:Transaction Date (copy)_1558245499351003136:nk])))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{04990789-70DC-4B58-8A81-7B87D57E3818}' />
+    </worksheet>
+    <worksheet name='Biased Votes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='votes' name='federated.083jbtb008ilnx1bdixv711kfsk5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.083jbtb008ilnx1bdixv711kfsk5'>
+            <column datatype='string' name='[Congress]' role='dimension' type='nominal' />
+            <column caption='Introduced' datatype='date' datatype-customized='true' name='[Introduced - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.083jbtb008ilnx1bdixv711kfsk5].[Introduced]'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;MMM dd, yyyy&quot;, TRIM( SPLIT( [Introduced], &quot; at&quot;, 1 ) ) )) ' />
+            </column>
+            <column caption='Introduced (old)' datatype='string' hidden='true' name='[Introduced]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Party]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Policy Area]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Relevant Bill]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Relevant Stocks Owned]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Senators]' role='dimension' type='nominal' />
+            <column datatype='string' name='[States]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Introduced - Split 1]' derivation='Attribute' name='[attr:Introduced - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Congress]' derivation='None' name='[none:Congress:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Party]' derivation='None' name='[none:Party:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Policy Area]' derivation='None' name='[none:Policy Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Relevant Bill]' derivation='None' name='[none:Relevant Bill:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Relevant Stocks Owned]' derivation='None' name='[none:Relevant Stocks Owned:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Senators]' derivation='None' name='[none:Senators:nk]' pivot='key' type='nominal' />
+            <column-instance column='[States]' derivation='None' name='[none:States:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.083jbtb008ilnx1bdixv711kfsk5].[Action (Senators,States)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_FDD59A7E61134D64B3EE0C35380D4AD8]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Senators]' />
+              <groupfilter function='level-members' level='[States]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.083jbtb008ilnx1bdixv711kfsk5].[Action (Senators,States)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.083jbtb008ilnx1bdixv711kfsk5].[attr:Introduced - Split 1:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.083jbtb008ilnx1bdixv711kfsk5].[none:States:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Senators:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Party:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Congress:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Relevant Bill:nk] / ([federated.083jbtb008ilnx1bdixv711kfsk5].[none:Policy Area:nk] / [federated.083jbtb008ilnx1bdixv711kfsk5].[none:Relevant Stocks Owned:nk]))))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{1C8DC4F1-2C59-4042-A20D-FE0521E3866C}' />
+    </worksheet>
+    <worksheet name='State Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='votes' name='federated.083jbtb008ilnx1bdixv711kfsk5' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.083jbtb008ilnx1bdixv711kfsk5'>
+            <column datatype='string' name='[Congress]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Party]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Policy Area]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Relevant Bill]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Relevant Stocks Owned]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Senators]' role='dimension' type='nominal' />
+            <column datatype='string' name='[States]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='votes.csv' datatype='integer' name='[__tableau_internal_object_id__].[votes.csv_36426A972E2140948ABAE5FCECE37C2F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[votes.csv_36426A972E2140948ABAE5FCECE37C2F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:votes.csv_36426A972E2140948ABAE5FCECE37C2F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='votes.csv' datatype='table' name='[__tableau_internal_object_id__].[votes.csv_36426A972E2140948ABAE5FCECE37C2F]' role='measure' type='quantitative' />
+            <column-instance column='[Senators]' derivation='None' name='[none:Senators:nk]' pivot='key' type='nominal' />
+            <column-instance column='[States]' derivation='None' name='[none:States:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.083jbtb008ilnx1bdixv711kfsk5].[Action (Congress,Party,Policy Area,Relevant Bill,Relevant Stocks Owned,Senators,States)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_A060A29EE794479FB6CAD6B04AC9F663]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Congress]' />
+              <groupfilter function='level-members' level='[Party]' />
+              <groupfilter function='level-members' level='[Policy Area]' />
+              <groupfilter function='level-members' level='[Relevant Bill]' />
+              <groupfilter function='level-members' level='[Relevant Stocks Owned]' />
+              <groupfilter function='level-members' level='[Senators]' />
+              <groupfilter function='level-members' level='[States]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.083jbtb008ilnx1bdixv711kfsk5].[none:States:nk]'>
+            <groupfilter function='level-members' level='[none:States:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.083jbtb008ilnx1bdixv711kfsk5].[Action (Congress,Party,Policy Area,Relevant Bill,Relevant Stocks Owned,Senators,States)]</column>
+            <column>[federated.083jbtb008ilnx1bdixv711kfsk5].[none:States:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.083jbtb008ilnx1bdixv711kfsk5].[__tableau_internal_object_id__].[cnt:votes.csv_36426A972E2140948ABAE5FCECE37C2F:qk]' value='Legend (no. of votes gradient)'>
+              <formatted-text>
+                <run>Legend (no. of votes gradient)</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.083jbtb008ilnx1bdixv711kfsk5].[__tableau_internal_object_id__].[cnt:votes.csv_36426A972E2140948ABAE5FCECE37C2F:qk]' />
+              <lod column='[federated.083jbtb008ilnx1bdixv711kfsk5].[none:States:nk]' />
+              <lod column='[federated.083jbtb008ilnx1bdixv711kfsk5].[none:Senators:nk]' />
+              <geometry column='[federated.083jbtb008ilnx1bdixv711kfsk5].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>States:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.083jbtb008ilnx1bdixv711kfsk5].[none:States:nk]>]]></run>
+                <run><![CDATA[
+Senators: <[federated.083jbtb008ilnx1bdixv711kfsk5].[none:Senators:nk]>
+]]></run>
+                <run fontcolor='#787878'>Number of Biased Votes: </run>
+                <run bold='true'><![CDATA[<[federated.083jbtb008ilnx1bdixv711kfsk5].[__tableau_internal_object_id__].[cnt:votes.csv_36426A972E2140948ABAE5FCECE37C2F:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.083jbtb008ilnx1bdixv711kfsk5].[Latitude (generated)]</rows>
+        <cols>[federated.083jbtb008ilnx1bdixv711kfsk5].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{4F6DD242-CADC-41A1-9183-2AC1E1BB7E84}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='1300' maxwidth='2200' minheight='1300' minwidth='2200' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='votes' name='federated.083jbtb008ilnx1bdixv711kfsk5' />
+      </datasources>
+      <datasource-dependencies datasource='federated.083jbtb008ilnx1bdixv711kfsk5'>
+        <column datatype='string' name='[States]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+        <column-instance column='[States]' derivation='None' name='[none:States:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98770' id='16' param='horz' type-v2='layout-flow' w='99272' x='364' y='615'>
+            <zone h='98770' id='14' type-v2='layout-basic' w='91999' x='364' y='615'>
+              <zone h='49385' id='3' name='State Map' w='91999' x='364' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49385' id='5' name='Biased Votes' w='46000' x='364' y='615'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49385' id='9' name='Biased Transactions' w='45999' x='46364' y='615'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98770' id='15' is-fixed='true' param='vert' type-v2='layout-flow' w='7273' x='92363' y='615'>
+              <zone h='61538' id='17' name='State Map' param='[federated.083jbtb008ilnx1bdixv711kfsk5].[none:States:nk]' type-v2='filter' values='database' w='7273' x='92363' y='615'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98770' id='12' param='vert' type-v2='layout-flow' w='99272' x='364' y='615'>
+                <zone fixed-size='280' h='49385' id='5' is-fixed='true' name='Biased Votes' w='49636' x='364' y='615'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49385' id='9' is-fixed='true' name='Biased Transactions' w='49636' x='50000' y='615'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49385' id='3' is-fixed='true' name='State Map' w='99272' x='364' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{28F6D5B7-21FB-4B6B-85AD-B4C2FFF59A99}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='1300' maxwidth='2200' minheight='1300' minwidth='2200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone forceUpdate='' h='98770' id='3' param='https://www.congress.gov/search?q=%7B%22source%22%3A%22legislation%22%2C%22congress%22%3A%5B%22117%22%2C%22116%22%2C%22115%22%2C%22114%22%2C%22113%22%2C112%5D%7D' type-v2='web' w='99272' x='364' y='615'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98770' id='9' param='vert' type-v2='layout-flow' w='99272' x='364' y='615'>
+                <zone fixed-size='280' forceUpdate='' h='98770' id='3' is-fixed='true' param='https://www.congress.gov/search?q=%7B%22source%22%3A%22legislation%22%2C%22congress%22%3A%5B%22117%22%2C%22116%22%2C%22115%22%2C%22114%22%2C%22113%22%2C112%5D%7D' type-v2='web' w='99272' x='364' y='615'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{16F3AAC1-1F54-4068-86AF-CD489D389392}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='44'>
+    <window class='worksheet' name='State Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='16' />
+      </viewpoint>
+      <simple-id uuid='{DDED52C5-8394-468C-B810-D970AD313682}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Biased Votes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C7490AEC-BFA2-415F-9BC0-19A51BBB36B4}' />
+    </window>
+    <window class='worksheet' name='Biased Transactions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.083jbtb008ilnx1bdixv711kfsk5].[sum:Calculation_2360449182828355585:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E4FA949B-423E-4B0B-A6C7-63722A17CE28}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Biased Transactions' />
+        <viewpoint name='Biased Votes' />
+        <viewpoint name='State Map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='16' />
+        </viewpoint>
+      </viewpoints>
+      <active id='15' />
+      <simple-id uuid='{EB140579-B07E-4AEA-B6BD-509F07049C3D}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints />
+      <active id='3' />
+      <simple-id uuid='{DD2D46C5-D013-4E83-A6B4-4B8531A5D5BC}' />
+    </window>
+  </windows>
+</workbook>
